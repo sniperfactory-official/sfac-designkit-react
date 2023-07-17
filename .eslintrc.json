@@ -3,7 +3,13 @@
     "browser": true,
     "es2021": true
   },
-  "extends": ["next/core-web-vitals", "prettier", "airbnb", "airbnb-base"],
+  "extends": [
+    "next/core-web-vitals",
+    "prettier",
+    "airbnb",
+    "airbnb-base",
+    "plugin:storybook/recommended"
+  ],
   "parserOptions": {
     "ecmaVersion": 12,
     "sourceType": "module"
