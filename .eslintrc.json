@@ -17,7 +17,10 @@
   "rules": {
     "react/react-in-jsx-scope": "off", // import React 경고 끄기
     "react/display-name": "off",
-    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "react/jsx-filename-extension": [
+      2,
+      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    ],
     "@typescript-eslint/strict-boolean-expressions": "off",
     "@typescript-eslint/no-misused-promises": "off",
     "@typescript-eslint/triple-slash-reference": "off",
