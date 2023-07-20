@@ -1,3 +1,7 @@
+/* eslint-disable import/extensions */
+/* eslint-disable import/prefer-default-export */
+/* eslint-disable react/function-component-definition */
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 
 import { Header } from './Header';

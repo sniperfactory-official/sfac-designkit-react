@@ -1,5 +1,8 @@
-import React from 'react';
-
+/* eslint-disable react/require-default-props */
+/* eslint-disable import/extensions */
+/* eslint-disable import/prefer-default-export */
+/* eslint-disable react/function-component-definition */
+/* eslint-disable react/no-unescaped-entities */
 import { Button } from './Button';
 import './header.css';
 
