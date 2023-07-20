@@ -52,10 +52,7 @@
     "storybook": "^7.0.27"
   },
   "lint-staged": {
-    "./**/*.{js,jsx,ts,tsx}": [
-      "npm run check-conflict-formatting-rules",
-      "npm run prettier:fix",
-      "npm run lint:fix"
-    ]
+    "*.js,jsx,ts,tsx": "eslint --cache --fix",
+    "*.--cache": "prettier --write"
   }
 }
