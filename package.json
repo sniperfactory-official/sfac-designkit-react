@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "format": "npx prettier . --write --cache",
-    "lint": "next lint",
+    "lint": "npx eslint --cache .",
     "prepare": "husky install",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
@@ -44,6 +44,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-storybook": "^0.6.12",
     "husky": "^8.0.0",
+    "lint-staged": "^13.2.3",
     "prettier": "3.0.0",
     "storybook": "^7.0.27"
   }
