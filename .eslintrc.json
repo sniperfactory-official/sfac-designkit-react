@@ -4,9 +4,9 @@
     "es2021": true
   },
   "ignorePatterns": [
-    "commitlint.config.js", 
-    "next.config.js", 
-    "postcss.config.js", 
+    "commitlint.config.js",
+    "next.config.js",
+    "postcss.config.js",
     "tailwind.config.js"
   ],
   "extends": [
