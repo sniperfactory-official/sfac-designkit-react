@@ -3,12 +3,21 @@
     "browser": true,
     "es2021": true
   },
+  "ignorePatterns": [
+    "commitlint.config.js", 
+    "next.config.js", 
+    "postcss.config.js", 
+    "tailwind.config.js"
+  ],
   "extends": [
     "next/core-web-vitals",
     "airbnb",
+    "airbnb-typescript",
     "airbnb-base",
-    "prettier",
-    "plugin:storybook/recommended"
+    "plugin:storybook/recommended",
+    "plugin:@typescript-eslint/recommended", // ts 권장
+    "plugin:prettier/recommended",
+    "prettier"
   ],
   "parserOptions": {
     "ecmaVersion": 12,
