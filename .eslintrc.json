@@ -1,3 +1,47 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "ignorePatterns": [
+    "commitlint.config.js",
+    "next.config.js",
+    "postcss.config.js",
+    "tailwind.config.js"
+  ],
+  "extends": [
+    "next/core-web-vitals",
+    "airbnb",
+    "airbnb-typescript",
+    "airbnb-base",
+    "plugin:storybook/recommended",
+    "plugin:@typescript-eslint/recommended", // ts 권장
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "react/react-in-jsx-scope": "off", // import React 경고 끄기
+    "react/display-name": "off",
+    "react/jsx-filename-extension": [
+      2,
+      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    ],
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/no-misused-promises": "off",
+    "@typescript-eslint/triple-slash-reference": "off",
+    "@typescript-eslint/consistent-type-definitions": "off",
+    "@typescript-eslint/restrict-template-expressions": "off",
+    "no-var": "error", // var 금지
+    "no-multiple-empty-lines": "error", // 여러 줄 공백 금지
+    "semi": ["error", "always"], // 끝 semi 콜론 사용
+    "eqeqeq": "error",
+    "no-unused-vars": "warn" // 사용하지 않은 변수 경고처리
+  }
 }
