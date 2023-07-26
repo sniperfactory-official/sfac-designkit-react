@@ -1,7 +1,6 @@
 {
   "name": "sfac-designkit-react",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -17,8 +16,10 @@
     "@types/react": "18.2.15",
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.14",
+    "commander": "^11.0.0",
     "eslint-config-next": "13.4.10",
     "next": "13.4.10",
+    "npm-packlist": "^7.0.4",
     "postcss": "8.4.26",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -47,15 +48,26 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-storybook": "^0.6.12",
-    "husky": "^8.0.0",
+    "husky": "^8.0.3",
     "lint-staged": "^13.2.3",
     "prettier": "3.0.0",
     "storybook": "^7.0.27"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },  
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
+      "npm run lint",
       "npm run format",
-      "npm run lint"
+      "git add ."
     ]
-  }
+  },
+  "description": "",
+  "main": ".prettierrc.js",
+  "keywords": [],
+  "author": "drk <doctor.k1994@gmail.com>",
+  "license": "ISC"
 }
