@@ -1,5 +1,6 @@
-import Text from "./Component/Text.tsx";
-import Title from "./Component/Title.tsx";
+import Text from "@/app/Component/Text.tsx";
+import Title from "@/app/Component/Title.tsx";
+import Logo from "@/app/Component/Logo.tsx";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Text size="xs" weight="semibold">
         안녕하세요
       </Text>
+      <Logo width={500} height={300} />
     </>
   );
 }
