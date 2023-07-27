@@ -28,8 +28,10 @@ export default function Text({
   };
 
   return (
-    <p className={`${sizeConfig[size]} ${weightConfig[weight]} ${className}`}>
+    <span
+      className={`${sizeConfig[size]} ${weightConfig[weight]} ${className}`}
+    >
       {children}
-    </p>
+    </span>
   );
 }

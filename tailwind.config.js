@@ -36,7 +36,7 @@ module.exports = {
         Grayscale: {
           5: "#F3F3F3",
           10: "#E6E6E6",
-          20: "#CCDEFF",
+          20: "#CCCCCC",
           30: "#B3B3B3",
           40: "#999999",
           50: "#808080",
