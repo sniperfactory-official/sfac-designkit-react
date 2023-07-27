@@ -9,7 +9,7 @@ export default function Home() {
       <Text size="xs" weight="semibold">
         안녕하세요
       </Text>
-      <Logo width={500} height={300} />
+      <Logo width={500} height={300} className="pl-8 bg-slate-500" />
     </>
   );
 }
