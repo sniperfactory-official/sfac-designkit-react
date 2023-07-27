@@ -1,6 +1,6 @@
-import Text from "@/app/Component/Text.tsx";
-import Title from "@/app/Component/Title.tsx";
-import Logo from "@/app/Component/Logo.tsx";
+import Text from "@/app/components/Text.tsx";
+import Title from "@/app/components/Title.tsx";
+import Logo from "@/app/components/Logo.tsx";
 
 export default function Home() {
   return (
