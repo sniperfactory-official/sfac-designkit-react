@@ -1,10 +1,15 @@
 "use client";
 
-import { useState, SyntheticEvent } from "react";
+import { useState, SyntheticEvent, ReactNode } from "react";
 import Content from "./Content.tsx";
 import Title from "./Title.tsx";
 
-export default function Accordion() {
+type AccordionProps = {
+  title: ReactNode;
+  content: ReactNode;
+};
+
+export default function Accordion({ title, content }: AccordionProps) {
   const [clicked, setClicked] = useState(false);
 
   const isClicked = (e: SyntheticEvent<HTMLButtonElement>) => {
@@ -17,13 +22,13 @@ export default function Accordion() {
       {clicked ? (
         <>
           <Title onClick={isClicked} className="rotate-90 transition-all">
-            타이틀
+            {title}
           </Title>
-          <Content>내용</Content>
+          <Content>{content}</Content>
         </>
       ) : (
         <Title onClick={isClicked} className="transition-all">
-          타이틀
+          {title}
         </Title>
       )}
     </div>
