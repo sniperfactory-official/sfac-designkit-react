@@ -1,3 +1,5 @@
+"use client";
+
 import { ReactNode, ButtonHTMLAttributes } from "react";
 import Text, { TextProps } from "@/app/components/Text.tsx";
 import {
@@ -42,6 +44,7 @@ export default function Button({
   asChild = false,
   textSize = "base",
   textWeight = "bold",
+  ...props
 }: ButtonProps) {
   const buttonStyles = `${getButtonStyles(variant, disabled, asChild)}`;
 
@@ -50,6 +53,8 @@ export default function Button({
       type="button"
       className={`${buttonStyles} ${className}`}
       disabled={disabled}
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      {...props}
     >
       <Text size={textSize} weight={textWeight}>
         {children}
