@@ -1,18 +1,34 @@
-export default function Badge() {
+import React from "react";
+
+interface BadgeProps {
+  children: string;
+  color?: "Primary" | "Secondary" | "Outline" | "Destructive";
+}
+
+function Badge({ children, color = "Primary" }: BadgeProps) {
+  let badgeStyle = "bg-Primary-80 text-white";
+
+  switch (color) {
+    case "Secondary":
+      badgeStyle = "bg-Grayscale-5 text-Grayscale-60";
+      break;
+    case "Outline":
+      badgeStyle = "bg-Primary-5 text-Primary-40 border border-Primary-40";
+      break;
+    case "Destructive":
+      badgeStyle = "bg-[#ff5757] text-white";
+      break;
+    default:
+      break;
+  }
+
   return (
-    <div>
-      <span className="relative top-115 left-115 w-14 h-5 rounded pt-1 pr-2.5 pl-2.5 pb-1 gap-2 bg-Primary-80 text-white text-[10px] font-semibold">
-        무료강의
-      </span>
-      <span className="relative top-115 left-279 w-14 h-5 rounded pt-1 pr-2.5 pl-2.5 pb-1 gap-2 bg-Grayscale-5 text-Grayscale-60 text-[10px] font-semibold">
-        무료강의
-      </span>
-      <span className="relative top-115 left-416 w-14 h-5 rounded pt-1 pr-2.5 pl-2.5 pb-1 gap-2 bg-Primary-5 text-Primary-40 border border-Primary-40 text-[10px] font-semibold">
-        무료강의
-      </span>
-      <span className="relative top-115 left-585 w-14 h-5 rounded pt-1 pr-2.5 pl-2.5 pb-1 gap-2 bg-[#ff5757] text-white text-[10px] font-semibold">
-        무료강의
-      </span>
-    </div>
+    <span
+      className={`W-14 h-5 rounded pt-1 pr-2.5 pl-2.5 pb-1 gap-2 font-semibold text-[10px] ${badgeStyle}`}
+    >
+      {children}
+    </span>
   );
 }
+
+export default Badge;
