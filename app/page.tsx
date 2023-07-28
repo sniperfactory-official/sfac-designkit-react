@@ -1,6 +1,7 @@
 import Text from "@/app/components/Text.tsx";
 import Title from "@/app/components/Title.tsx";
 import Logo from "@/app/components/Logo.tsx";
+import Avatar from "@/app/components/Avatar/Avatar";
 
 export default function Home() {
   return (
@@ -10,6 +11,10 @@ export default function Home() {
         안녕하세요
       </Text>
       <Logo width={500} height={300} className="pl-8 bg-slate-500" />
+      <Avatar
+        src="http://www.gravatar.com/avatar/9017a5f22556ae0eb7fb0710711ec125?s=128"
+        size={80}
+      />
     </>
   );
 }
