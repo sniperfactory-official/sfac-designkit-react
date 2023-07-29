@@ -18,9 +18,13 @@ export default function Home() {
         안녕하세요
       </Text>
       <Logo width={500} height={300} className="pl-8 bg-slate-500" />
-      <Button variant="primary" onClick={onClick}>
-        테스트
-      </Button>
+      <Button
+        variant="primary"
+        text="로그인"
+        onClick={onClick}
+        disabled
+        asChild
+      />
     </>
   );
 }

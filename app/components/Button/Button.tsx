@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode, ButtonHTMLAttributes } from "react";
+import { ButtonHTMLAttributes } from "react";
 import Text, { TextProps } from "@/app/components/Text.tsx";
 import {
   ButtonVariant,
@@ -17,6 +17,9 @@ export function getButtonStyles(
   const disabledStyles = "text-Grayscale-20 bg-Grayscale-5";
   const asChildStyle = `${buttonBasicStyle} ext-Grayscale-20 bg-Grayscale-5`;
 
+  if (disabled && asChild) {
+    return `${asChildStyle} ${disabledStyles}`;
+  }
   if (disabled) {
     return `${buttonStyle} ${disabledStyles}`;
   }
@@ -27,7 +30,7 @@ export function getButtonStyles(
 }
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  children: ReactNode;
+  text: string;
   className?: string;
   disabled?: boolean;
   asChild?: boolean;
@@ -38,12 +41,12 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 export default function Button({
   className = "",
-  children,
   variant = "primary",
   disabled = false,
   asChild = false,
   textSize = "base",
   textWeight = "bold",
+  text,
   ...props
 }: ButtonProps) {
   const buttonStyles = `${getButtonStyles(variant, disabled, asChild)}`;
@@ -57,7 +60,7 @@ export default function Button({
       {...props}
     >
       <Text size={textSize} weight={textWeight}>
-        {children}
+        {text}
       </Text>
     </button>
   );
