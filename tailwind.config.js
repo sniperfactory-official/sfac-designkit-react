@@ -68,6 +68,14 @@ module.exports = {
         sm: "14px",
         xs: "12px",
       },
+
+      padding: {
+        25: "25px",
+      },
+
+      margin: {
+        15: "15px",
+      },
     },
     plugins: [],
     safeList: ["text-2xl", "text-3xl", "text-4xl"],
