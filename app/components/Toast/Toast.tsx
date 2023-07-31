@@ -54,7 +54,6 @@ export default function Toast({
       <Text size={textSize} weight={textWeight}>
         {text}
       </Text>
-      {/* {actionButton} */}
       {button && (
         <Button
           text="확인"
