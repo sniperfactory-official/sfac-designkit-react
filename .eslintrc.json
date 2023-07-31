@@ -47,5 +47,6 @@
     "import/extensions": "off",
     "import/export": "off",
     "react/jsx-boolean-value": "off"
+    "react/jsx-props-no-spreading": "off" // Prop spreading 허용
   }
 }
