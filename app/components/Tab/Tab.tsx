@@ -1,5 +1,3 @@
-"use client";
-
 import Text, { TextProps } from "@/app/components/Text.tsx";
 
 type ButtonProps = {
@@ -13,6 +11,7 @@ export default function Tab({
   textSize = "base",
   textWeight = "semibold",
   active = false,
+  ...props
 }: ButtonProps) {
   return (
     <button
@@ -20,6 +19,7 @@ export default function Tab({
       className={`border-b-4 transition-colors duration-300 ${
         active ? "border-Primary-100 text-Primary-100" : "border-transparent"
       } w-[347px] text-center pt-[14px] pb-[17px]`}
+      {...props}
     >
       <Text size={textSize} weight={textWeight}>
         {text}
