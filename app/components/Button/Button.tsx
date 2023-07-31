@@ -8,7 +8,7 @@ import {
   buttonStyle,
   disabledStyles,
   asChildStyle,
-} from "@/app/components/Button/style.tsx";
+} from "@/app/components/Button/style.ts";
 
 export function getButtonStyles(
   variant: ButtonVariant,
