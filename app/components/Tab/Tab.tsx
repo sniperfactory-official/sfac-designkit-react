@@ -1,11 +1,18 @@
 "use client";
 
-import { ReactNode, useState } from "react";
+import { useState } from "react";
+import Text, { TextProps } from "@/app/components/Text.tsx";
 
 type ButtonProps = {
-  children: ReactNode;
+  text: string;
+  textSize?: TextProps["size"];
+  textWeight?: TextProps["weight"];
 };
-export default function Tab({ children }: ButtonProps) {
+export default function Tab({
+  text,
+  textSize = "base",
+  textWeight = "semibold",
+}: ButtonProps) {
   const [activeTab, setActiveTab] = useState(false);
 
   const isActiveTab = () => {
@@ -20,7 +27,9 @@ export default function Tab({ children }: ButtonProps) {
         activeTab ? "border-Primary-100 text-Primary-100" : "border-transparent"
       } w-[347px] text-center pt-[14px] pb-[17px]`}
     >
-      {children}
+      <Text size={textSize} weight={textWeight}>
+        {text}
+      </Text>
     </button>
   );
 }
