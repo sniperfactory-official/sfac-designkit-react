@@ -15,7 +15,7 @@ export function getButtonStyles(
   asChild: boolean,
 ): string {
   const disabledStyles = "text-Grayscale-20 bg-Grayscale-5";
-  const asChildStyle = `${buttonBasicStyle} ext-Grayscale-20 bg-Grayscale-5`;
+  const asChildStyle = `${buttonBasicStyle} text-Grayscale-20 bg-Grayscale-5`;
 
   if (disabled && asChild) {
     return `${asChildStyle} ${disabledStyles}`;
