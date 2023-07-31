@@ -19,6 +19,7 @@ module.exports = {
         "8dp": "0px 8px 16px 0px rgba(0, 0, 0, 0.19)",
         "16dp": "0px 16px 32px 0px rgba(0, 0, 0, 0.19)",
         "24dp": "0px 24px 32px 0px rgba(0, 0, 0, 0.19)",
+        toast: "3px 3px 9px 0px rgba(206, 206, 206, 0.47)",
       },
       colors: {
         transparent: "transparent",
@@ -52,7 +53,7 @@ module.exports = {
         },
         Meaningful: {
           red: "#FF0000",
-          green: "#33E95B",
+          green: "#07A320",
         },
       },
 
