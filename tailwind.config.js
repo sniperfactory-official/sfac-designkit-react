@@ -76,6 +76,18 @@ module.exports = {
       margin: {
         15: "15px",
       },
+
+      borderWidth: {
+        1: "1px",
+      },
+
+      width: {
+        770: "770px",
+      },
+
+      height: {
+        95: "95px",
+      },
     },
     plugins: [],
     safeList: ["text-2xl", "text-3xl", "text-4xl"],
