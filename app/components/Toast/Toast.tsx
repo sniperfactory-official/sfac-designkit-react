@@ -9,7 +9,7 @@ type ToastProps = {
   textWeight?: TextProps["weight"];
   titleSize?: TitleProps["size"];
   button?: boolean;
-  type?: "Simple" | "Success" | "Error" | "With Action" | "With title";
+  type?: "Simple" | "Success" | "Error" | "With Action" | "With Title";
 };
 
 export default function Toast({
@@ -36,7 +36,7 @@ export default function Toast({
       actionButton = "text-Primary-40 absolute right-5 top-[30px]";
       titleStyle = "block text-Grayscale-80";
       break;
-    case "With title":
+    case "With Title":
       titleStyle = "block text-Grayscale-80";
       break;
     default:
