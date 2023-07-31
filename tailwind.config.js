@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  mode: "jit",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -7,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      borderRadius: {
+        circle: "50%",
+      },
       boxShadow: {
         "0dp": "0px 0px 0px 0px rgba(0, 0, 0, 0)",
         "1dp": "0px 1px 2px 0px rgba(0, 0, 0, 0.19)",
