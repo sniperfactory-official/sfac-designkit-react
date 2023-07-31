@@ -5,8 +5,9 @@ import Text, { TextProps } from "@/app/components/Text.tsx";
 import {
   ButtonVariant,
   variantsStyles,
-  buttonBasicStyle,
   buttonStyle,
+  disabledStyles,
+  asChildStyle,
 } from "@/app/components/Button/style.tsx";
 
 export function getButtonStyles(
@@ -14,9 +15,6 @@ export function getButtonStyles(
   disabled: boolean,
   asChild: boolean,
 ): string {
-  const disabledStyles = "text-Grayscale-20 bg-Grayscale-5";
-  const asChildStyle = `${buttonBasicStyle} text-Grayscale-20 bg-Grayscale-5`;
-
   if (disabled && asChild) {
     return `${asChildStyle} ${disabledStyles}`;
   }
@@ -49,12 +47,10 @@ export default function Button({
   text,
   ...props
 }: ButtonProps) {
-  const buttonStyles = `${getButtonStyles(variant, disabled, asChild)}`;
-
   return (
     <button
       type="button"
-      className={`${buttonStyles} ${className}`}
+      className={`${getButtonStyles(variant, disabled, asChild)} ${className}`}
       disabled={disabled}
       // eslint-disable-next-line react/jsx-props-no-spreading
       {...props}
