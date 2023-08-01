@@ -7,7 +7,7 @@ interface ContentProps {
 
 export default function Content({ className, children }: ContentProps) {
   return (
-    <div className={twMerge(className, `w-770 h-240 p-5 border-0 rounded-sm`)}>
+    <div className={twMerge(className, `w-235 h-75 p-5 border-0 rounded-sm`)}>
       {children}
     </div>
   );
