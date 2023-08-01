@@ -43,6 +43,10 @@
     "no-multiple-empty-lines": "error", // 여러 줄 공백 금지
     "semi": ["error", "always"], // 끝 semi 콜론 사용
     "eqeqeq": "error",
-    "no-unused-vars": "warn" // 사용하지 않은 변수 경고처리
+    "no-unused-vars": "warn", // 사용하지 않은 변수 경고처리
+    "import/extensions": "off",
+    "import/export": "off",
+    "react/jsx-boolean-value": "off",
+    "react/jsx-props-no-spreading": "off" // Prop spreading 허용
   }
 }
