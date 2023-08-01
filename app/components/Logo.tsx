@@ -1,4 +1,3 @@
-import logo from "@/public/logo.svg";
 import Image from "next/image";
 
 interface LogoProps {
@@ -11,7 +10,7 @@ export default function Logo({ width, height, className }: LogoProps) {
   return (
     <Image
       className={`${className} block`}
-      src={logo}
+      src="/logo.svg"
       width={width}
       height={height}
       alt="logo"
