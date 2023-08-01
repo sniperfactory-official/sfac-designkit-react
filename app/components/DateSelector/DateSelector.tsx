@@ -9,9 +9,9 @@ import DatePicker from "react-datepicker";
 import Arrow from "@/app/assets/selectArrow.svg";
 import "react-datepicker/dist/react-datepicker.css";
 import selectDate from "../../assets/selectDate.svg";
-import "./DatePicker.css";
+import "./DateSelector.css";
 
-export default function DatePickerComponent() {
+export default function DateSelector() {
   const [dates, setDates] = useState<{
     startDate: Date | null;
     endDate: Date | null;
