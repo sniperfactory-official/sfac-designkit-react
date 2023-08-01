@@ -9,6 +9,7 @@ module.exports = {
   theme: {
     extend: {
       borderRadius: {
+        sm: "10px",
         circle: "50%",
       },
       boxShadow: {
@@ -74,11 +75,11 @@ module.exports = {
       },
 
       padding: {
-        25: "25px",
+        5.125: "25px",
       },
 
       margin: {
-        15: "15px",
+        "15px": "15px",
       },
 
       borderWidth: {
@@ -94,6 +95,7 @@ module.exports = {
         95: "95px",
         145: "145px",
         172: "172px",
+        235: "235px",
         240: "240px",
       },
     },

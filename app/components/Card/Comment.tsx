@@ -10,7 +10,7 @@ export default function Comment({ className, children }: CommentProps) {
     <div
       className={twMerge(
         className,
-        `w-770 h-95 p-25 mb-15 border-1 border-Grayscale-5`,
+        `w-770 h-95 p-5.125 border-1 rounded-sm border-Grayscale-5`,
       )}
     >
       {children}

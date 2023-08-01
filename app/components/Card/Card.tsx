@@ -1,7 +1,7 @@
 import Comment from "@/app/components/Card/Comment.tsx";
-import Lecture from "./Lecture";
-import Post from "./Post";
-import Vertical from "./Vertical";
+import Lecture from "@/app/components/Card//Lecture";
+import Post from "@/app/components/Card//Post";
+import Vertical from "@/app/components/Card//Vertical";
 
 interface CardProps {
   CardType: "Comment" | "Lecture" | "Post" | "Vertical";

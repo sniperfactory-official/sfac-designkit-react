@@ -10,7 +10,7 @@ export default function Vertical({ className, children }: VerticalProps) {
     <div
       className={twMerge(
         className,
-        `w-245 h-145 p-20 mb-20 border-1 border-Grayscale-5`,
+        `w-245 h-235 p-5 border-1 rounded-sm border-Grayscale-5`,
       )}
     >
       {children}

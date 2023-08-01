@@ -10,7 +10,7 @@ export default function Lecture({ className, children }: LectureProps) {
     <div
       className={twMerge(
         className,
-        `w-770 h-172 p-20 mb-20 border-1 border-Grayscale-5`,
+        `w-770 h-172 p-5 border-1 rounded-sm border-Grayscale-5`,
       )}
     >
       {children}

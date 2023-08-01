@@ -10,7 +10,7 @@ export default function Post({ className, children }: PostProps) {
     <div
       className={twMerge(
         className,
-        `w-770 h-240 p-20 mb-20 border-1 border-Grayscale-5`,
+        `w-770 h-240 p-5 border-1 rounded-sm border-Grayscale-5`,
       )}
     >
       {children}
