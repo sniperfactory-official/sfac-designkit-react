@@ -1,16 +1,16 @@
 import { twMerge } from "tailwind-merge";
 
-interface CommentProps {
+interface VerticalProps {
   className?: string;
   children: React.ReactNode;
 }
 
-export default function Comment({ className, children }: CommentProps) {
+export default function Vertical({ className, children }: VerticalProps) {
   return (
     <div
       className={twMerge(
         className,
-        `w-770 h-95 p-25 mb-15 border-1 border-Grayscale-5`,
+        `w-245 h-145 p-20 mb-20 border-1 border-Grayscale-5`,
       )}
     >
       {children}

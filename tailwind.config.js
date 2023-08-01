@@ -86,11 +86,15 @@ module.exports = {
       },
 
       width: {
+        245: "245px",
         770: "770px",
       },
 
       height: {
         95: "95px",
+        145: "145px",
+        172: "172px",
+        240: "240px",
       },
     },
     plugins: [],
