@@ -5,8 +5,9 @@ interface SFACPlayerProps {
     volume: number, // 미디어의 볼륨을 나타내는 숫자 값
     muted: boolean,  // 미디어의 음소거 여부를 나타내는 불리언 값
     playbackRate: number,  // 미디어의 재생 속도를 나타내는 숫자 값
-    width: ([string, number]),  // 미디어 플레이어의 가로 크기를 나타내는 문자열 또는 숫자 값
-    height: ([string, number]),  // 미디어 플레이어의 세로 크기를 나타내는 문자열 또는 숫자 값 -- 추후 하나 선택시 수정
+    // width: ([string, number]),  // 미디어 플레이어의 가로 크기를 나타내는 문자열 또는 숫자 값
+    width: number,  // 미디어 플레이어의 가로 크기를 나타내는 문자열 또는 숫자 값
+    height:  number,  // 미디어 플레이어의 세로 크기를 나타내는 문자열 또는 숫자 값 -- 추후 하나 선택시 수정
     progressInterval: number ,    // 미디어의 진행 상태를 업데이트하는 간격을 나타내는 숫자 값 (밀리초 단위)
     pip: boolean,   // Picture-in-Picture 모드를 사용할지를 나타내는 불리언 값
     stopOnUnmount: boolean,   // 컴포넌트가 언마운트될 때 미디어 재생을 중지할지를 나타내는 불리언 값
