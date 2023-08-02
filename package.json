@@ -1,15 +1,16 @@
 {
-  "name": "react-player-test",
+  "name": "sfac-lms-player",
   "version": "1.0.0",
   "description": "",
-  "main": "src/sfac-player.tsx",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "module": "dist/index.js",
   "scripts": {
-    "build": "babel src --out-dir dist --extensions \".ts,.tsx\"",
-    "dev": "babel src --out-dir dist --extensions \".ts,.tsx\" --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --config webpack.config.js",
+    "dev": "pnpm build --watch"
   },
-  "type": "module",
   "author": "",
+  "browser": "./browser/specific/main.js",
   "license": "ISC",
   "peerDependencies": {
     "react": "^18.2.0",
@@ -20,8 +21,15 @@
     "@babel/core": "^7.22.9",
     "@babel/preset-env": "^7.22.9",
     "@babel/preset-react": "^7.22.5",
+    "@babel/preset-typescript": "^7.22.5",
     "@types/node": "^20.4.5",
     "@types/react": "^18.2.17",
-    "typescript": "^5.1.6"
+    "babel-loader": "^9.1.3",
+    "css-loader": "^6.8.1",
+    "style-loader": "^3.3.3",
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.1.6",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
   }
 }

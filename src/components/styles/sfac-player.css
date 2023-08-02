@@ -1,0 +1,7 @@
+.sfac-player {
+    position: relative;
+    width: 960px;
+    height: 350px;
+    overflow: hidden;
+    background-color: #000;
+}
