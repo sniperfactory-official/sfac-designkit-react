@@ -30,7 +30,7 @@ export default function Input({
   };
   if (mode === "Text") {
     return (
-      <span className="w-[422px] h-[87px] rounded">
+      <div className="w-[422px] h-[87px] rounded relative top-4 left-4">
         <span className="text-Primary-80 font-bold w-9 h-[17px] relative left-[10px]">
           이메일
         </span>
@@ -42,12 +42,12 @@ export default function Input({
           className="bg-Grayscale-5 w-[422px] h-[48px] pr-4 pt-[10px] pl-4 pb-[10px] outline-none rounded-[10px]"
           onChange={handleInputText}
         />
-      </span>
+      </div>
     );
   }
   if (mode === "Label") {
     return (
-      <span className="w-[422px] h-[87px] rounded">
+      <div className="w-[422px] h-[87px] rounded relative top-4 left-4">
         <span className="text-Primary-80 font-bold w-[36px] h-[17px] relative left-[10px]">
           이메일
         </span>
@@ -63,7 +63,7 @@ export default function Input({
         <span className="text-Grayscale-40 font-medium text-xs relative left-[10px]">
           이메일을 입력해주세요
         </span>
-      </span>
+      </div>
     );
   }
   if (mode === "Default") {
@@ -72,7 +72,7 @@ export default function Input({
         type="email"
         id="Default"
         placeholder="이메일 주소"
-        className="bg-Grayscale-5 w-[422px] h-[48px] pr-4 pt-[10px] pl-4 pb-[10px] outline-none rounded-[10px]"
+        className="bg-Grayscale-5 w-[422px] h-[48px] pr-4 pt-[10px] pl-4 pb-[10px] outline-none rounded-[10px] relative top-4 left-4"
         onChange={handleInputDefault}
       />
     );
