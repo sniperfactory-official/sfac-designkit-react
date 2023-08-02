@@ -8,6 +8,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      spacing: {
+        115: "115px",
+        279: "279px",
+        416: "416px",
+        585: "585px",
+      },
       borderRadius: {
         circle: "50%",
       },
