@@ -4,16 +4,16 @@ import magnifying from "@/app/assets/magnifying.svg";
 import magnifyingfocus from "@/app/assets/magnifyingfocus.svg";
 
 export interface SearchfieldProps {
-  onChangeSearchfield?: (value: string) => void;
+  onClickSearchfield?: (value: string) => void;
 }
 
-export default function Searchfield({ onChangeSearchfield }: SearchfieldProps) {
+export default function Searchfield({ onClickSearchfield }: SearchfieldProps) {
   const [focus, setFocus] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
   const handleSearchfield = () => {
-    if (onChangeSearchfield && inputRef.current) {
-      onChangeSearchfield(inputRef.current.value);
+    if (onClickSearchfield && inputRef.current) {
+      onClickSearchfield(inputRef.current.value);
       inputRef.current.value = "";
     }
   };
@@ -25,7 +25,7 @@ export default function Searchfield({ onChangeSearchfield }: SearchfieldProps) {
   return (
     <div>
       {focus ? (
-        <div className="input-wrapper w-[245px] h-[40px] outline-none border border-blue-500 rounded-[10px] relative top-3 left-5">
+        <div className="input-wrapper w-[245px] h-[40px] outline-none border border-blue-500 rounded-[10px]">
           <input
             ref={inputRef}
             type="text"
@@ -49,7 +49,7 @@ export default function Searchfield({ onChangeSearchfield }: SearchfieldProps) {
           </div>
         </div>
       ) : (
-        <div className="input-wrapper w-[245px] h-[40px] outline-none border border-Grayscale-10 rounded-[10px] relative top-3 left-5">
+        <div className="input-wrapper w-[245px] h-[40px] outline-none border border-Grayscale-10 rounded-[10px]">
           <input
             ref={inputRef}
             type="text"
