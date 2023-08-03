@@ -1,8 +1,9 @@
+import React from 'react';
 import Text, { TextProps } from "../Text";
 import Title, { TitleProps } from "../Title";
 import Button from "../Button";
 
-type ToastProps = {
+export type ToastProps = {
   title?: string;
   text?: string;
   textSize?: TextProps["size"];

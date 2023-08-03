@@ -1,6 +1,7 @@
+import React from 'react';
 import Text, { TextProps } from "../Text";
 
-type ButtonProps = {
+export type ButtonProps = {
   text: string;
   textSize?: TextProps["size"];
   textWeight?: TextProps["weight"];

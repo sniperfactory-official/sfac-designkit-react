@@ -1,7 +1,7 @@
-/// <reference types="react" />
+import React from 'react';
 import { TextProps } from "../Text";
 import { TitleProps } from "../Title";
-type ToastProps = {
+export type ToastProps = {
     title?: string;
     text?: string;
     textSize?: TextProps["size"];
@@ -10,5 +10,4 @@ type ToastProps = {
     button?: boolean;
     type?: "Simple" | "Success" | "Error" | "With Action" | "With Title";
 };
-export default function Toast({ title, text, type, textSize, textWeight, titleSize, button, }: ToastProps): import("react").JSX.Element;
-export {};
+export default function Toast({ title, text, type, textSize, textWeight, titleSize, button, }: ToastProps): React.JSX.Element;

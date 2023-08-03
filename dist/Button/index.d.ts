@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes } from "react";
+import React, { ButtonHTMLAttributes } from "react";
 import { TextProps } from "../Text";
 import { ButtonVariant } from "./style";
 export declare function getButtonStyles(variant: ButtonVariant, disabled: boolean, asChild: boolean): string;
@@ -11,4 +11,4 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     textSize?: TextProps["size"];
     textWeight?: TextProps["weight"];
 }
-export default function Button({ className, variant, disabled, asChild, textSize, textWeight, text, ...props }: ButtonProps): import("react").JSX.Element;
+export default function Button({ className, variant, disabled, asChild, textSize, textWeight, text, ...props }: ButtonProps): React.JSX.Element;

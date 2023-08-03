@@ -1,6 +1,6 @@
 import React from "react";
 
-interface BadgeProps {
+export interface BadgeProps {
   children: string;
   color?: "Primary" | "Secondary" | "Outline" | "Destructive";
 }
