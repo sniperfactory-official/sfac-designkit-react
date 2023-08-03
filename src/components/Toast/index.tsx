@@ -1,6 +1,6 @@
-import Text, { TextProps } from "../Text/Text";
-import Title, { TitleProps } from "../Title/Title";
-import Button from "../Button/Button";
+import Text, { TextProps } from "../Text";
+import Title, { TitleProps } from "../Title";
+import Button from "../Button";
 
 type ToastProps = {
   title?: string;

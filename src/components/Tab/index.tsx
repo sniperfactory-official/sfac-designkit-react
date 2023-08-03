@@ -1,4 +1,4 @@
-import Text, { TextProps } from "../Text/Text";
+import Text, { TextProps } from "../Text";
 
 type ButtonProps = {
   text: string;

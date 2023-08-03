@@ -1,6 +1,6 @@
 /// <reference types="react" />
-import { TextProps } from "../Text/Text";
-import { TitleProps } from "../Title/Title";
+import { TextProps } from "../Text";
+import { TitleProps } from "../Title";
 type ToastProps = {
     title?: string;
     text?: string;

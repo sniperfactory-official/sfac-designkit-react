@@ -1,14 +1,14 @@
 "use client";
 
 import { ButtonHTMLAttributes } from "react";
-import Text, { TextProps } from "../Text/Text";
+import Text, { TextProps } from "../Text";
 import {
   ButtonVariant,
   variantsStyles,
   buttonStyle,
   disabledStyles,
   asChildStyle,
-} from "../Button/style";
+} from "./style";
 
 export function getButtonStyles(
   variant: ButtonVariant,
