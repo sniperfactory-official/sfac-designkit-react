@@ -20,7 +20,7 @@ export default function Breadcrumb({ menu }: BreadcrumbProps) {
             {index !== 0 && (
               <Icon
                 name="BreadArrow"
-                className="mx-2 fill-Grayscale-40"
+                className="mx-2 !fill-Grayscale-40"
                 width={7}
                 height={10}
               />
