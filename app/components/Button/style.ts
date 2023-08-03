@@ -18,4 +18,4 @@ export const variantsStyles: Record<ButtonVariant, string> = {
 export const buttonBasicStyle = "h-[35px] rounded-lg";
 export const buttonStyle = "rounded-[10px] w-[35rem] py-4 justify-center";
 export const disabledStyles = "text-Grayscale-20 bg-Grayscale-5";
-export const asChildStyle = `${buttonBasicStyle} rounded-[7px] text-Grayscale-20 bg-Grayscale-5`;
+export const asChildStyle = `${buttonBasicStyle} w-[115px] rounded-[7px] text-Grayscale-20 bg-Grayscale-5`;
