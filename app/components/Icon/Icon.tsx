@@ -23,7 +23,7 @@ export default function Icon({
     <IconComponent
       width={width}
       height={height}
-      className={`${className} fill-Grayscale-60`}
+      className={`${className} fill-Grayscale-60 overflow-visible`}
     />
   );
 }
