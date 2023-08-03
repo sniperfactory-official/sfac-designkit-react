@@ -1,1 +1,1 @@
-export { default as SFACPlayer } from './components/sfac-player';
+export * from "./components";
