@@ -3,7 +3,7 @@ import { ImgHTMLAttributes } from "react";
 import Image from "next/image";
 import defaultPhoto from "@/assets/photocard_default.svg";
 
-interface PhotoProps extends ImgHTMLAttributes<HTMLImageElement> {
+export interface PhotoProps extends ImgHTMLAttributes<HTMLImageElement> {
   className?: string;
 }
 
