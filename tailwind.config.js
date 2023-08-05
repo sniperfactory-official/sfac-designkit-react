@@ -15,6 +15,7 @@ module.exports = {
         585: "585px",
       },
       borderRadius: {
+        sm: "10px",
         circle: "50%",
       },
       boxShadow: {
@@ -78,6 +79,35 @@ module.exports = {
         base: "16px",
         sm: "14px",
         xs: "12px",
+      },
+
+      padding: {},
+
+      margin: {
+        "15px": "15px",
+      },
+
+      borderWidth: {
+        1: "1px",
+      },
+
+      width: {
+        235: "235px",
+        245: "245px",
+        700: "700px",
+        770: "770px",
+        775: "775px",
+      },
+
+      height: {
+        75: "75px",
+        87: "87px",
+        95: "95px",
+        145: "145px",
+        170: "170px",
+        220: "220px",
+        235: "235px",
+        240: "240px",
       },
     },
     plugins: [],
