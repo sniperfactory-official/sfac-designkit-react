@@ -4,13 +4,13 @@ import magnifying from "@/app/assets/magnifying.svg";
 import magnifyingfocus from "@/app/assets/magnifyingfocus.svg";
 
 export interface SearchfieldProps {
-  onClickSearchfield?: (value: string) => void;
+  onClick?: (value: string) => void;
   placeholder?: string;
   className?: string;
 }
 
 export default function Searchfield({
-  onClickSearchfield,
+  onClick,
   placeholder = "검색어를 입력해주세요",
   className,
 }: SearchfieldProps) {
@@ -18,8 +18,8 @@ export default function Searchfield({
   const inputRef = useRef<HTMLInputElement>(null);
 
   const handleSearchfield = () => {
-    if (onClickSearchfield && inputRef.current) {
-      onClickSearchfield(inputRef.current.value);
+    if (onClick && inputRef.current) {
+      onClick(inputRef.current.value);
       inputRef.current.value = "";
     }
   };
