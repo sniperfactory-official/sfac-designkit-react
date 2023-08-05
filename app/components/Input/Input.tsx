@@ -3,7 +3,7 @@ import Text from "../Text";
 
 export interface InputProps {
   type?: "text" | "password";
-  onChangeInputText?: (value: string) => void;
+  onChange?: (value: string) => void;
   className?: string;
   placeholder?: string;
   label?: string;
@@ -20,11 +20,11 @@ export default function Input({
   className,
   textColor = "gray",
   labelColor = "blue",
-  onChangeInputText,
+  onChange,
 }: InputProps) {
   const handleInputText = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (onChangeInputText) {
-      onChangeInputText(e.target.value);
+    if (onChange) {
+      onChange(e.target.value);
     }
   };
 
