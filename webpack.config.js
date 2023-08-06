@@ -22,6 +22,17 @@ module.exports = {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
       },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: "@svgr/webpack",
+            options: {
+              native: true,
+            },
+          },
+        ],
+      },
     ],
   },
   resolve: {
