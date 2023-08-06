@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ReactNode, SyntheticEvent } from "react";
+import React, { ReactNode, SyntheticEvent } from "react";
 
 type TitleProps = {
   children: ReactNode;

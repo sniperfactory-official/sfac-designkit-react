@@ -1,6 +1,6 @@
 {
   "name": "sfac-designkit-react",
-  "version": "0.1.0",
+  "version": "0.1.8",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -42,6 +42,8 @@
   "dependencies": {
     "@svgr/webpack": "^8.0.1",
     "date-fns": "^2.30.0",
+    "next": "^13.4.12",
+    "react-datepicker": "^4.16.0",
     "tailwind-merge": "^1.14.0"
   }
 }

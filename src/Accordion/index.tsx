@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, SyntheticEvent, ReactNode } from "react";
+import React, { useState, SyntheticEvent, ReactNode } from "react";
 import Content from "./Content";
 import Title from "./Title";
 

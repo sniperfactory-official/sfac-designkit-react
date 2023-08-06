@@ -1,5 +1,5 @@
 import { twMerge } from "tailwind-merge";
-import { ImgHTMLAttributes } from "react";
+import React,{ ImgHTMLAttributes } from "react";
 import Image from "next/image";
 
 export interface PhotoProps extends ImgHTMLAttributes<HTMLImageElement> {

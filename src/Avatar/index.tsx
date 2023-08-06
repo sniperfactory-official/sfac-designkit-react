@@ -1,6 +1,6 @@
 import { twMerge } from "tailwind-merge";
 import Image from "next/image";
-import { ImgHTMLAttributes } from "react";
+import React,{ ImgHTMLAttributes } from "react";
 
 interface AvatarProps extends ImgHTMLAttributes<HTMLImageElement> {
   size?: number;
