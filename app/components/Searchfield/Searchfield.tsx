@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React, { useState, useRef } from "react";
-import magnifying from "@/app/assets/magnifying.svg";
 import magnifyingfocus from "@/app/assets/magnifyingfocus.svg";
+import magnifying from "@/app/assets/magnifying.svg";
 
 export interface SearchfieldProps {
   onClick?: (value: string) => void;
@@ -34,31 +34,27 @@ export default function Searchfield({
   return (
     <div>
       <div
-        className={`input-wrapper w-[245px] h-[40px] outline-none border rounded-[10px] ${wrapperFocusStyle} ${className}`}
+        className={`${wrapperFocusStyle} ${className} px-[15px] relative border w-[245px] py-3 rounded-[10px] flex`}
       >
-        <div>
-          <input
-            ref={inputRef}
-            placeholder={placeholderText}
-            type="text"
-            id="Searchfield"
-            className="relative top-[7px] left-[15px] w-[182px] h-[17px] font-medium text-sm outline-none text-Grayscale-80"
-            onFocus={() => setFocus(true)}
-            onBlur={() => setFocus(false)}
-            onKeyDown={handleKeyDown}
-          />
-        </div>
-        <div
-          onClick={handleSearchfield}
-          role="button"
-          tabIndex={0}
-          onKeyPress={handleKeyDown}
-        >
-          <Image
-            src={focus ? magnifying : magnifyingfocus}
-            alt="돋보기"
-            className="relative top-[-13px] left-[212px]"
-          />
+        <input
+          ref={inputRef}
+          placeholder={placeholderText}
+          type="text"
+          id="Searchfield"
+          className=" font-medium text-sm text-Grayscale-80 w-[182px]"
+          onFocus={() => setFocus(true)}
+          onBlur={() => setFocus(false)}
+          onKeyDown={handleKeyDown}
+        />
+        <div className="flex right-[15px] absolute">
+          <button
+            type="button"
+            className="w-[20px] h-[20px] text-[0]"
+            onClick={handleSearchfield}
+          >
+            돋보기
+            <Image src={focus ? magnifying : magnifyingfocus} alt="돋보기" />
+          </button>
         </div>
       </div>
     </div>
