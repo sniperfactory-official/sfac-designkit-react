@@ -2,3 +2,7 @@ node_modules/
 src/
 public/
 tsconfig.json
+build/
+next-env.d.ts
+.prettierrc.js
+.eslintrc.json
