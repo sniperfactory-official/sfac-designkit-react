@@ -26,7 +26,7 @@ export default function NavigationMenu({
   };
 
   return (
-    <div
+    <li
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       className={`${className} list-none w-[115px] h-[40px] rounded-[10px] text-center py-[10px] text-Grayscale-100 hover:text-Primary-60 hover:bg-Primary-5 cursor-pointer`}
@@ -36,6 +36,6 @@ export default function NavigationMenu({
           {text}
         </Text>
       </Link>
-    </div>
+    </li>
   );
 }

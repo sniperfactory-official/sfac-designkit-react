@@ -8,8 +8,8 @@ interface NavProps {
 
 export default function Gnb({ text, linkTo, className }: NavProps) {
   return (
-    <div className="w-[115px] h-[70px] flex items-center ">
+    <ul className="w-[115px] h-[70px] flex items-center ">
       <NavigationMenu text={text} linkTo={`/${linkTo}`} className={className} />
-    </div>
+    </ul>
   );
 }
