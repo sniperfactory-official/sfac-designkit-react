@@ -1,163 +1,96 @@
 import React, { useState, ReactNode } from "react";
-import Image from "next/image";
-import Arrow from "@/app/assets/arrow.svg";
-import ToggleButton from "@/app/assets/toggleButton.svg";
-import Ai from "@/app/assets/icons/imgIcon/AI.svg";
-import All from "@/app/assets/icons/imgIcon/All.svg";
-import AngelFace from "@/app/assets/icons/imgIcon/AngelFace.svg";
-import Data from "@/app/assets/icons/imgIcon/Data.svg";
-import Design from "@/app/assets/icons/imgIcon/Design.svg";
-import Disagree from "@/app/assets/icons/imgIcon/Disagree.svg";
-import Folder from "@/app/assets/icons/imgIcon/Folder.svg";
-import Game from "@/app/assets/icons/imgIcon/Game.svg";
-import Hello from "@/app/assets/icons/imgIcon/Hello.svg";
-import Hit from "@/app/assets/icons/imgIcon/Hit.svg";
-import Link from "@/app/assets/icons/imgIcon/Link.svg";
-import Live from "@/app/assets/icons/imgIcon/Live.svg";
-import Note from "@/app/assets/icons/imgIcon/Note.svg";
-import Security from "@/app/assets/icons/imgIcon/Security.svg";
-import Sound from "@/app/assets/icons/imgIcon/Sound.svg";
-import Web from "@/app/assets/icons/imgIcon/Web.svg";
+import Icon, { IconName } from "../Icon/Icon";
+import Text from "../Text";
 
 type SelectProps = {
   mode: "Main" | "Sub";
   children?: ReactNode;
   className?: string;
-  focusedClassName?: string;
-  src?:
-    | "Arrow"
-    | "ToggleButton"
-    | "Ai"
-    | "All"
-    | "AngelFace"
-    | "Data"
-    | "Design"
-    | "Disagree"
-    | "Folder"
-    | "Game"
-    | "Hello"
-    | "Hit"
-    | "Link"
-    | "Live"
-    | "Note"
-    | "Security"
-    | "Sound"
-    | "Web";
   checkbox?: boolean;
+  icon?: IconName;
+  active?: boolean;
 };
 
 export default function Select({
   mode,
   children,
   className,
-  focusedClassName,
-  src = "AngelFace",
   checkbox = false,
+  active = false,
+  icon,
+  ...props
 }: SelectProps) {
-  const [focused, setFocused] = useState(false);
+  const [clicked, setClicked] = useState(false);
   const [checked, setChecked] = useState(false);
 
-  function determineSrc(name: string): string {
-    switch (name) {
-      case "Arrow":
-        return Arrow;
-      case "ToggleButton":
-        return ToggleButton;
-      case "Ai":
-        return Ai;
-      case "All":
-        return All;
-      case "AngelFace":
-        return AngelFace;
-      case "Data":
-        return Data;
-      case "Design":
-        return Design;
-      case "Disagree":
-        return Disagree;
-      case "Folder":
-        return Folder;
-      case "Game":
-        return Game;
-      case "Hello":
-        return Hello;
-      case "Hit":
-        return Hit;
-      case "Link":
-        return Link;
-      case "Live":
-        return Live;
-      case "Note":
-        return Note;
-      case "Security":
-        return Security;
-      case "Sound":
-        return Sound;
-      case "Web":
-        return Web;
-      default:
-        return AngelFace;
-    }
-  }
-
   const buttonBaseStyle =
-    "w-[245px] h-[46px] outline-none border-none rounded-[10px] flex items-center";
+    "h-[46px] outline-none border-none rounded-[10px] flex items-center";
 
-  const focusStyle = mode === "Main" ? "bg-red-500" : "text-red-500";
+  const isMainMode = mode === "Main";
+  const focusStyle = isMainMode ? "bg-Primary-5" : "text-Primary-80";
+  const textClassName = isMainMode ? "base" : "sm";
 
-  const buttonStyle = `${buttonBaseStyle} ${className} ${
-    focused ? `${focusedClassName} ${focusStyle}` : "text-Grayscale-80"
-  }`;
-
-  const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const isChecked = e.target.checked;
-    setChecked(isChecked);
-    setFocused(isChecked);
-  };
-
-  const handleFocus = () => {
-    if (checkbox) {
-      setChecked(true);
+  const handleClick = () => {
+    setClicked(!clicked);
+    if (checkbox && mode === "Sub") {
+      setChecked(!checked);
     }
-    setFocused(true);
   };
 
-  const handleBlur = () => {
-    if (checkbox) {
-      setChecked(false);
-    }
-    setFocused(false);
+  const handleCheckboxChange = () => {
+    setChecked(!checked);
   };
+
+  const uniqueId = Math.random().toString(36).substring(2);
+
   return (
-    <div>
-      <button
-        type="button"
-        className={buttonStyle}
-        onFocus={handleFocus}
-        onBlur={handleBlur}
-      >
-        {mode === "Main" && (
-          <>
-            <Image
-              src={determineSrc(src)}
-              alt="Icon"
-              width={20}
-              height={20}
-              className="ml-5 mr-[15px] mt-[13px] mb-[13px]"
-            />
-            {children}
-          </>
+    <button
+      type="button"
+      className={`w-[245px] px-[20px] ${buttonBaseStyle} ${className} ${
+        clicked || active ? focusStyle : "text-Grayscale-80"
+      }`}
+      onClick={handleClick}
+      {...props}
+    >
+      <div className="flex items-center">
+        {isMainMode && icon && <Icon name={icon} />}
+        {mode === "Sub" && checkbox && (
+          <label
+            htmlFor="cb1"
+            className={`w-[15px] h-[15px] border border-Primary-30 ${
+              clicked || active ? "bg-Primary-30" : ""
+            } rounded-[3px]`}
+          >
+            {checked ? (
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2.49951 7L4.64208 9.39925C5.03847 9.84313 5.73243 9.84469 6.13082 9.40261L10.9995 4"
+                  stroke="white"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                />
+              </svg>
+            ) : (
+              <input
+                type="checkbox"
+                checked={checked}
+                id={uniqueId}
+                onChange={handleCheckboxChange}
+                className="appearance-none indeterminate:bg-gray-300"
+              />
+            )}
+          </label>
         )}
-
-        {checkbox && (
-          <input
-            type="checkbox"
-            checked={checked}
-            onChange={handleCheckboxChange}
-          />
-        )}
-        {mode === "Sub" && children}
-      </button>
-    </div>
+        <Text size={textClassName} weight="medium" className="ml-[15px]">
+          {children}
+        </Text>
+      </div>
+    </button>
   );
 }
