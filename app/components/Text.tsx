@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-export type TextProps = {
+type TextProps = {
   className?: string;
   children: ReactNode;
   size: "xl" | "lg" | "sm" | "xs" | "base";
