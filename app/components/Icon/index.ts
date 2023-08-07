@@ -3,6 +3,7 @@ export { default as Hello } from "@/app/assets/icons/imgIcon/Hello.svg";
 export { default as Agree } from "@/app/assets/icons/imgIcon/Agree.svg";
 export { default as AI } from "@/app/assets/icons/imgIcon/AI.svg";
 export { default as All } from "@/app/assets/icons/imgIcon/All.svg";
+export { default as App } from "@/app/assets/icons/imgIcon/App.svg";
 export { default as AngelFace } from "@/app/assets/icons/imgIcon/AngelFace.svg";
 export { default as Data } from "@/app/assets/icons/imgIcon/Data.svg";
 export { default as Design } from "@/app/assets/icons/imgIcon/Design.svg";
