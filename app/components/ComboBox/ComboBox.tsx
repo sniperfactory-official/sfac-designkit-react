@@ -1,13 +1,6 @@
 "use client";
 
-import React, {
-  useState,
-  Children,
-  isValidElement,
-  cloneElement,
-  ReactNode,
-  SyntheticEvent,
-} from "react";
+import React, { useState, Children, ReactNode, SyntheticEvent } from "react";
 import Icon, { IconName } from "@/app/components/Icon/Icon.tsx";
 import Text from "@/app/components/Text.tsx";
 
@@ -44,9 +37,9 @@ export default function ComboBox({
       </button>
       {clicked && (
         <ul className="w-[245px] border mt-[5px] rounded-[10px] p-[10px]">
-          {Children.map(children, child =>
-            isValidElement(child) ? <li>{cloneElement(child)}</li> : child,
-          )}
+          {Children.map(children, child => (
+            <li className="mb-[10px] last:mb-0">{child}</li>
+          ))}
         </ul>
       )}
     </div>
