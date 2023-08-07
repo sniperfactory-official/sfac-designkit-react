@@ -16,6 +16,10 @@ npm i sfac-designkit-react
 import “sfac-designkit-react/style.css”
 ```
 
+스타일 적용을 위해 사용하려는 컴포넌트 상단에 위 코드를 삽입하여 줍니다.
+
+`app/layout.tsx`에 해당 코드를 넣어주면, 하위 페이지들은 자동으로 적용됩니다.
+
 ### 스택
 
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white"> <img src="https://img.shields.io/badge/Tailwind CSS-06B6D4?style=for-the-badge&logo=Tailwind CSS&logoColor=white">
