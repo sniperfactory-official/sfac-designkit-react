@@ -1,6 +1,7 @@
 import { twMerge } from "tailwind-merge";
 import Image from "next/image";
-import React,{ ImgHTMLAttributes } from "react";
+import React, { ImgHTMLAttributes } from "react";
+import defaultImage from "../assets/avatarDefault.svg?url";
 
 interface AvatarProps extends ImgHTMLAttributes<HTMLImageElement> {
   size?: number;
@@ -21,7 +22,7 @@ export default function Avatar({
   return (
     <div className={twMerge(`p-0`, className)}>
       <Image
-        src={src ? `${src}` : "@/assets/avatarDefault.svg"}
+        src={src ? `${src}` : defaultImage}
         width={size}
         height={size}
         alt={props.alt ? props.alt : ""}

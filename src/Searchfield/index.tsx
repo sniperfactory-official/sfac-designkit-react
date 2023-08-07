@@ -1,5 +1,7 @@
 import Image from "next/image";
 import React, { useState, useRef } from "react";
+import magnifyingfocus from "../assets/magnifyingfocus.svg?url";
+import magnifying from "../assets/magnifying.svg?url";
 
 export interface SearchfieldProps {
   onClick?: (value: string) => void;
@@ -51,14 +53,7 @@ export default function Searchfield({
             onClick={handleSearchfield}
           >
             돋보기
-            <Image
-              src={
-                focus
-                  ? "@/assets/magnifying.svg"
-                  : "@/assets/magnifyingfocus.svg"
-              }
-              alt="돋보기"
-            />
+            <Image src={focus ? magnifying : magnifyingfocus} alt="돋보기" />
           </button>
         </div>
       </div>

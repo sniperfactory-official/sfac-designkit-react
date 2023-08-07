@@ -1,5 +1,6 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+// const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   mode: "production",
@@ -10,6 +11,7 @@ module.exports = {
     libraryTarget: "umd",
     umdNamedDefine: true,
     globalObject: "this",
+    publicPath: "",
   },
   module: {
     rules: [
@@ -20,18 +22,39 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
-      },
-      {
-        test: /\.svg$/,
         use: [
           {
-            loader: "@svgr/webpack",
+            loader: MiniCssExtractPlugin.loader,
             options: {
-              native: true,
+              publicPath: "",
             },
           },
+          {
+            loader: "css-loader",
+          },
+          {
+            loader: "postcss-loader",
+          },
         ],
+      },
+      {
+        test: /\.svg$/i,
+        issuer: /\.[jt]sx?$/,
+        resourceQuery: { not: [/url/] },
+        use: ["@svgr/webpack"],
+      },
+      {
+        type: "asset",
+        resourceQuery: /url/,
+        generator: {
+          outputPath: "./assets/",
+          filename: "[name][ext]",
+        },
+        parser: {
+          dataUrlCondition: {
+            maxSize: 20 * 1024,
+          },
+        },
       },
     ],
   },

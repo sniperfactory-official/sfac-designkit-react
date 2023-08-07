@@ -7,7 +7,10 @@ import getMonth from "date-fns/getMonth";
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import selectDate from "../assets/selectDate.svg?url";
 import "./style.css";
+
+import Arrow from "../assets/selectArrow.svg?url";
 
 export default function DateSelector() {
   const [dates, setDates] = useState<{
@@ -53,7 +56,7 @@ export default function DateSelector() {
               onClick={decreaseMonth}
               disabled={prevMonthButtonDisabled}
             >
-              <Image src="@/assets/selectArrow.svg" alt="이전 버튼" />
+              <Image src={Arrow} alt="이전 버튼" />
             </button>
             {getYear(date)}년 {[getMonth(date) + 1]}월
             <button
@@ -61,17 +64,13 @@ export default function DateSelector() {
               onClick={increaseMonth}
               disabled={nextMonthButtonDisabled}
             >
-              <Image
-                src="@/assets/selectArrow.svg"
-                alt="다음 버튼"
-                className="rotate-180"
-              />
+              <Image src={Arrow} alt="다음 버튼" className="rotate-180" />
             </button>
           </div>
         )}
       />
       <Image
-        src="@/assets/selectDate.svg"
+        src={selectDate}
         alt="날짜 선택하기"
         className="relative right-6 cursor-pointer"
       />
