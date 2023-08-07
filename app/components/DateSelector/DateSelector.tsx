@@ -1,44 +1,39 @@
-"use client";
-
 import Image from "next/image";
 import { ko } from "date-fns/locale";
 import getYear from "date-fns/getYear";
 import getMonth from "date-fns/getMonth";
-import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import Arrow from "@/app/assets/selectArrow.svg";
 import "react-datepicker/dist/react-datepicker.css";
 import selectDate from "../../assets/selectDate.svg";
 import "./DateSelector.css";
 
-export default function DateSelector() {
-  const [dates, setDates] = useState<{
-    startDate: Date | null;
-    endDate: Date | null;
-  }>({
-    startDate: null,
-    endDate: null,
-  });
+export interface DateSelectorProps {
+  selected: Date | null;
+  startDate: Date | null;
+  endDate: Date | null;
+  ChangeDate: (date: [Date | null, Date | null]) => void;
+  dateFormat?: string;
+}
 
-  const setChangeDate = (select: [Date | null, Date | null]) => {
-    const [start, end] = select;
-    setDates({
-      startDate: start,
-      endDate: end,
-    });
-  };
-
+export default function DateSelector({
+  selected,
+  startDate,
+  endDate,
+  ChangeDate,
+  dateFormat = "yyyy. MM. dd",
+}: DateSelectorProps) {
   return (
-    <div className="flex w-[212px]">
+    <div className="w-[213px] flex">
       <DatePicker
-        className="w-[212px] py-2 pl-3 rounded-[10px] border border-Grayscale-20 text-sm
+        className="w-[213px] py-2 pl-3 rounded-[10px] border border-Grayscale-20 text-sm
         "
         selectsRange
-        selected={dates.startDate}
-        startDate={dates.startDate}
-        endDate={dates.endDate}
-        onChange={setChangeDate}
-        dateFormat="yyyy. MM. dd"
+        selected={selected}
+        startDate={startDate}
+        endDate={endDate}
+        onChange={ChangeDate}
+        dateFormat={dateFormat}
         locale={ko}
         placeholderText="날짜를 선택해 주세요."
         disabledKeyboardNavigation
@@ -68,10 +63,11 @@ export default function DateSelector() {
           </div>
         )}
       />
+
       <Image
         src={selectDate}
         alt="날짜 선택하기"
-        className="relative right-6 cursor-pointer"
+        className="relative right-5"
       />
     </div>
   );
