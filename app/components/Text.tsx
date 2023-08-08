@@ -3,14 +3,14 @@ import { ReactNode } from "react";
 export type TextProps = {
   className?: string;
   children: ReactNode;
-  size: "xl" | "lg" | "sm" | "xs" | "base";
-  weight: "bold" | "semibold" | "medium";
+  size?: "xl" | "lg" | "sm" | "xs" | "base";
+  weight?: "bold" | "semibold" | "medium";
 };
 
 export default function Text({
   className = "",
-  size,
-  weight,
+  size = "base",
+  weight = "medium",
   children,
 }: TextProps) {
   const sizeConfig = {

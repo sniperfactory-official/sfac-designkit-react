@@ -17,6 +17,7 @@ export default function Avatar({
   border = true,
   borderColor = "border-Grayscale-10",
   className = "",
+  ...props
 }: AvatarProps) {
   return (
     <div className={twMerge(`p-0`, className)}>
@@ -24,7 +25,7 @@ export default function Avatar({
         src={src ? `${src}` : defaultImage}
         width={size}
         height={size}
-        alt=""
+        alt={props.alt ? props.alt : ""}
         className={`rounded-circle ${border ? `border-2` : ``} ${borderColor}`}
       />
     </div>
