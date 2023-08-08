@@ -1,8 +1,11 @@
+"use client";
+
 import React, { useState, ReactNode } from "react";
 import Icon, { IconName } from "../Icon/Icon";
+import Check from "../../../public/check.svg";
 import Text from "../Text";
 
-type SelectProps = {
+export type SelectProps = {
   mode: "Main" | "Sub";
   children?: ReactNode;
   className?: string;
@@ -14,7 +17,7 @@ type SelectProps = {
 export default function Select({
   mode,
   children,
-  className,
+  className = "w-[245px]",
   checkbox = false,
   active = false,
   icon,
@@ -42,11 +45,10 @@ export default function Select({
   };
 
   const uniqueId = Math.random().toString(36).substring(2);
-
   return (
     <button
       type="button"
-      className={`w-[245px] px-[20px] ${buttonBaseStyle} ${className} ${
+      className={`px-[20px] ${buttonBaseStyle} ${className} ${
         clicked || active ? focusStyle : "text-Grayscale-80"
       }`}
       onClick={handleClick}
@@ -62,20 +64,7 @@ export default function Select({
             } rounded-[3px]`}
           >
             {checked ? (
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 14 14"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M2.49951 7L4.64208 9.39925C5.03847 9.84313 5.73243 9.84469 6.13082 9.40261L10.9995 4"
-                  stroke="white"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                />
-              </svg>
+              <Check />
             ) : (
               <input
                 type="checkbox"
