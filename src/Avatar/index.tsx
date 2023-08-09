@@ -1,33 +1,30 @@
-import { twMerge } from "tailwind-merge";
-import Image from "next/image";
 import React, { ImgHTMLAttributes } from "react";
+import { twMerge } from "tailwind-merge";
 import defaultImage from "../assets/avatarDefault.svg?url";
 
 interface AvatarProps extends ImgHTMLAttributes<HTMLImageElement> {
   size?: number;
   src?: string;
-  border?: boolean;
-  borderColor?: string;
+  ring?: boolean;
+  ringColor?: string;
   className?: string;
 }
 
 export default function Avatar({
-  size = 34,
+  size = 45,
   src,
-  border = true,
-  borderColor = "border-Grayscale-10",
+  ring = true,
+  ringColor = "border-Grayscale-10",
   className = "",
   ...props
 }: AvatarProps) {
+  const ringClass = ring ? "ring-2" : "";
   return (
-    <div className={twMerge(`p-0`, className)}>
-      <Image
-        src={src ? `${src}` : defaultImage}
-        width={size}
-        height={size}
-        alt={props.alt ? props.alt : ""}
-        className={`rounded-circle ${border ? `border-2` : ``} ${borderColor}`}
-      />
-    </div>
+    <img 
+      src={src ? src : defaultImage}
+      className={twMerge(`rounded-full object-cover ${ringColor} ${ringClass}`, className)}
+      width={size}
+      alt={props.alt ? props.alt : ""}
+   />
   );
 }
