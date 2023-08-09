@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 // imgIcon
 import Hello from "../assets/icons/imgIcon/Hello.svg?url";
@@ -14,7 +14,6 @@ import Folder from "../assets/icons/imgIcon/Folder.svg?url";
 import Game from "../assets/icons/imgIcon/Game.svg?url";
 import Hit from "../assets/icons/imgIcon/Hit.svg?url";
 import Link from "../assets/icons/imgIcon/Link.svg?url";
-import Live from "../assets/icons/imgIcon/Live.svg?url";
 import Note from "../assets/icons/imgIcon/Note.svg?url";
 import Security from "../assets/icons/imgIcon/Security.svg?url";
 import Sound from "../assets/icons/imgIcon/Sound.svg?url";
@@ -26,11 +25,32 @@ import CoverBox from "../assets/icons/stroke/CoverBox.svg?url";
 import Quality from "../assets/icons/stroke/Quality.svg?url";
 import SkipNext from "../assets/icons/stroke/SkipNext.svg?url";
 import WideScreen from "../assets/icons/stroke/WideScreen.svg?url";
-import BreadArrow from "../assets/icons/stroke/BreadArrow.svg?url";
 
-type IconnameProps = "Hello" | "Agree" | "AI" | "All" | "App" | "AngelFace" | "Data" | "Design" | "Disagree" | "Folder" | "Game" | "Hit" | "Link" | "Live" | "Note" | "Security" | "Sound" | "Web" | "Arrow" | "CoverBox" | "Quality" | "SkipNext" | "WideScreen" | "BreadArrow" ;
+export type IconnameProps =
+  | "Hello"
+  | "Agree"
+  | "AI"
+  | "All"
+  | "App"
+  | "AngelFace"
+  | "Data"
+  | "Design"
+  | "Disagree"
+  | "Folder"
+  | "Game"
+  | "Hit"
+  | "Link"
+  | "Note"
+  | "Security"
+  | "Sound"
+  | "Web"
+  | "Arrow"
+  | "CoverBox"
+  | "Quality"
+  | "SkipNext"
+  | "WideScreen";
 
-interface IconProps extends React.HTMLAttributes<HTMLImageElement>{
+interface IconProps extends React.HTMLAttributes<HTMLImageElement> {
   name: IconnameProps;
   alt?: string;
   width?: number;
@@ -38,34 +58,45 @@ interface IconProps extends React.HTMLAttributes<HTMLImageElement>{
   className?: string;
 }
 
-export default function Icon({ name, alt = "", width = 21, height = 21, className = "", ...props }: IconProps) {
+export default function Icon({
+  name,
+  alt = "",
+  width = 21,
+  height = 21,
+  className = "",
+  ...props
+}: IconProps) {
   const iconGroup = {
-    "Hello": Hello,
-    "Agree": Agree,
-    "AI": AI,
-    "All": All,
-    "App": App,
-    "AngelFace": AngelFace,
-    "Data": Data,
-    "Design": Design,
-    "Disagree": Disagree,
-    "Folder": Folder,
-    "Game": Game,
-    "Hit": Hit,
-    "Link": Link,
-    "Live": Live,
-    "Note": Note,
-    "Security": Security,
-    "Sound": Sound,
-    "Web": Web,
-    "Arrow": Arrow,
-    "CoverBox": CoverBox,
-    "Quality": Quality,
-    "SkipNext": SkipNext,
-    "WideScreen": WideScreen,
-    "BreadArrow": BreadArrow, 
+    Hello: Hello,
+    Agree: Agree,
+    AI: AI,
+    All: All,
+    App: App,
+    AngelFace: AngelFace,
+    Data: Data,
+    Design: Design,
+    Disagree: Disagree,
+    Folder: Folder,
+    Game: Game,
+    Hit: Hit,
+    Link: Link,
+    Note: Note,
+    Security: Security,
+    Sound: Sound,
+    Web: Web,
+    Arrow: Arrow,
+    CoverBox: CoverBox,
+    Quality: Quality,
+    SkipNext: SkipNext,
+    WideScreen: WideScreen,
   };
   return (
-    <img src={iconGroup[name]} alt={alt} width={width} height={height} className={className} />
+    <img
+      src={iconGroup[name]}
+      alt={alt}
+      width={width}
+      height={height}
+      className={className}
+    />
   );
 }
