@@ -2,13 +2,28 @@
 
 import { ButtonHTMLAttributes } from "react";
 import Text, { TextProps } from "@/app/components/Text.tsx";
-import {
-  ButtonVariant,
-  variantsStyles,
-  buttonStyle,
-  disabledStyles,
-  asChildStyle,
-} from "@/app/components/Button/style.ts";
+
+type ButtonVariant =
+  | "primary"
+  | "secondary"
+  | "destructive"
+  | "outline"
+  | "link"
+  | "ghost";
+
+const variantsStyles: Record<ButtonVariant, string> = {
+  primary: "bg-Primary-80 text-white",
+  secondary: "bg-Grayscale-5 text-Grayscale-60",
+  destructive: "bg-[#FF5757] text-white",
+  outline: "bg-Primary-5 border border-Primary-40 text-Primary-80",
+  link: "text-Primary-60 hover:underline underline-offset-4 decoration-2",
+  ghost: "text-Primary-60 hover:bg-Primary-5",
+};
+
+const buttonBasicStyle = "h-[35px] px-8 rounded-lg";
+const buttonStyle = "rounded-[10px] w-[35rem] py-4 justify-center";
+const disabledStyles = "text-Grayscale-20 bg-Grayscale-5";
+const asChildStyle = `${buttonBasicStyle} rounded-[7px] text-Grayscale-20 bg-Grayscale-5`;
 
 export function getButtonStyles(
   variant: ButtonVariant,
