@@ -6,6 +6,11 @@ const nextConfig = {
   },
   webpack(config) {
     config.module.rules.push({
+      ...fileLoaderRule,
+      test: /\.svg$/i,
+      resourceQuery: /url/, // *.svg?url
+    },
+    {
       test: /\.svg$/,
       use: ["@svgr/webpack"],
     });

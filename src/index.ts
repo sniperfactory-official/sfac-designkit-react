@@ -18,5 +18,6 @@ export { default as Textarea } from "./Textarea";
 export { default as Layout } from "./Layout";
 export { default as Gnb } from "./Gnb";
 export { default as Navigation } from "./Navigation";
+export { default as Icon } from "./Icon";
 
 export default {};
