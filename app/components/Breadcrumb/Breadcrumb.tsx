@@ -1,6 +1,5 @@
-import Image from "next/image";
 import Text from "@/app/components/Text.tsx";
-import arrow from "@/app/assets/arrow.svg";
+import Icon from "@/app/components/Icon/Icon";
 
 interface BreadcrumbItem {
   label: string;
@@ -19,7 +18,12 @@ export default function Breadcrumb({ menu }: BreadcrumbProps) {
         {breadcrumbs.map((item, index) => (
           <li key={item.label} className="flex items-center">
             {index !== 0 && (
-              <Image src={arrow} alt="breadcrumb_arrow_img" className="mx-2" />
+              <Icon
+                name="BreadArrow"
+                className="mx-2 !fill-Grayscale-40"
+                width={7}
+                height={10}
+              />
             )}
             <Text size="lg" weight="semibold" className="text-Grayscale-80">
               {item.label}
