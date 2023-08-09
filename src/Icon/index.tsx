@@ -28,7 +28,7 @@ import SkipNext from "../assets/icons/stroke/SkipNext.svg?url";
 import WideScreen from "../assets/icons/stroke/WideScreen.svg?url";
 import BreadArrow from "../assets/icons/stroke/BreadArrow.svg?url";
 
-type IconnameProps = "Hello" | "Agree" | "AI" | "All" | "App" | "AngelFace" | "Data" | "Design" | "Disagree" | "Folder" | "Game" | "Hit" | "Link" | "Live" | "Note" | "Security" | "Sound" | "Web" | "Arrow" | "CoverBox" | "Quality" | "SkipNext" | "WideScreen" | "BreadArrow" ;
+export type IconnameProps = "Hello" | "Agree" | "AI" | "All" | "App" | "AngelFace" | "Data" | "Design" | "Disagree" | "Folder" | "Game" | "Hit" | "Link" | "Live" | "Note" | "Security" | "Sound" | "Web" | "Arrow" | "CoverBox" | "Quality" | "SkipNext" | "WideScreen" | "BreadArrow" ;
 
 interface IconProps extends React.HTMLAttributes<HTMLImageElement>{
   name: IconnameProps;
