@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import Text, { TextProps } from "../Text";
 import Title, { TitleProps } from "../Title";
 import Button from "../Button";
@@ -34,7 +34,7 @@ export default function Toast({
       toastStyle = "text-Meaningful-red bg-[#FCF5F5] border-Meaningful-red";
       break;
     case "With Action":
-      actionButton = "text-Primary-40 absolute right-5 top-[30px]";
+      actionButton = "text-Primary-40 absolute right-5 top-[20px]";
       titleStyle = "block text-Grayscale-80";
       break;
     case "With Title":
@@ -45,7 +45,7 @@ export default function Toast({
   }
   return (
     <div
-      className={`relative w-[360px] shadow-toast rounded-[10px] border px-5 py-6 ${toastStyle}`}
+      className={`relative w-[360px] shadow-toast rounded-[10px] border px-5 py-4 ${toastStyle}`}
     >
       {title && (
         <Title size={titleSize} className={titleStyle}>
