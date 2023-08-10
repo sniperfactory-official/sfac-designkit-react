@@ -53,7 +53,7 @@ export default function Toast({
         className,
       )}
     >
-      <div className="w-auto">
+      <div>
         {title && (
           <Title size={titleSize} className={titleStyle}>
             {title}
