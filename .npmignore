@@ -7,3 +7,4 @@ next-env.d.ts
 .prettierrc.js
 .eslintrc.json
 .eslintcache
+tailwind.config.js

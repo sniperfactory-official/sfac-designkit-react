@@ -80,6 +80,24 @@ module.exports = {
         sm: "14px",
         xs: "12px",
       },
+
+      width: {
+        235: "235px",
+        245: "245px",
+        700: "700px",
+        770: "770px",
+        775: "775px",
+      },
+
+      height: {
+        75: "75px",
+        87: "87px",
+        95: "95px",
+        170: "170px",
+        220: "220px",
+        235: "235px",
+        240: "240px",
+      }
     },
     plugins: [],
     safeList: ["text-2xl", "text-3xl", "text-4xl"],
