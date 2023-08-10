@@ -10,6 +10,7 @@ type ToastProps = {
   titleSize?: TitleProps["size"];
   button?: boolean;
   type?: "Simple" | "Success" | "Error" | "With Action" | "With Title";
+  className?: string;
 };
 
 export default function Toast({
@@ -20,6 +21,7 @@ export default function Toast({
   textWeight = "medium",
   titleSize = "sm",
   button = false,
+  className = "",
 }: ToastProps) {
   let toastStyle = "border-Grayscale-10 text-Grayscale-60";
   let actionButton = "";
@@ -44,7 +46,7 @@ export default function Toast({
   }
   return (
     <div
-      className={`relative w-[360px] shadow-toast rounded-[10px] border px-5 py-4 ${toastStyle}`}
+      className={`relative w-[360px] shadow-toast rounded-[10px] border px-5 py-4 ${toastStyle} ${className}`}
     >
       {title && (
         <Title size={titleSize} className={titleStyle}>
