@@ -49,7 +49,7 @@ export default function Toast({
   return (
     <div
       className={twMerge(
-        `w-[360px] flex break-all shadow-toast rounded-[10px] border px-5 py-4 tracking-[-0.02rem] ${toastStyle}`,
+        `w-[360px] flex break-all shadow-toast rounded-[10px] border px-5 py-4 tracking-[-0.02rem] justify-between ${toastStyle}`,
         className,
       )}
     >
