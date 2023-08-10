@@ -26,7 +26,7 @@ export default function ComboBox({
     <div className="ComboBox">
       <button
         onClick={isClicked}
-        className="flex justify-between w-[245px] h-[40px] border justify-items-start items-center px-[10px] rounded-[10px]"
+        className="bg-white flex justify-between w-[245px] h-[40px] border justify-items-start items-center px-[10px] rounded-[10px]"
         type="button"
         {...props}
       >
