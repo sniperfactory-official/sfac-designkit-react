@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Text, { TextProps } from "@/app/components/Text.tsx";
 import arrow from "@/app/assets/arrow.svg";
+import Text from "@/app/components/Text.tsx";
+import Icon from "@/app/components/Icon/Icon";
+
 
 interface BreadcrumbProps {
   menu: string[];
@@ -25,6 +28,12 @@ export default function Breadcrumb({
           >
             {index !== 0 && (
               <Image src={arrow} alt="breadcrumb_arrow_img" className="mr-2" />
+              <Icon
+                name="BreadArrow"
+                className="mx-2 !fill-Grayscale-40"
+                width={7}
+                height={10}
+              />
             )}
             <Text
               size={textSize}

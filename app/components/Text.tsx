@@ -24,7 +24,7 @@ export default function Text({
   const weightConfig = {
     bold: "font-bold",
     semibold: "font-semibold",
-    medium: "medium",
+    medium: "font-medium",
   };
 
   return (
