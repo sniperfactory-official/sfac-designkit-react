@@ -46,6 +46,7 @@
     "no-unused-vars": "warn", // 사용하지 않은 변수 경고처리
     "import/extensions": "off",
     "import/export": "off",
+    "react/jsx-boolean-value": "off",
     "react/jsx-props-no-spreading": "off" // Prop spreading 허용
   }
 }

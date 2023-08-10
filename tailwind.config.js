@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  mode: "jit",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -7,6 +8,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+      spacing: {
+        115: "115px",
+        279: "279px",
+        416: "416px",
+        585: "585px",
+      },
+      borderRadius: {
+        sm: "10px",
+        circle: "50%",
+      },
       boxShadow: {
         "0dp": "0px 0px 0px 0px rgba(0, 0, 0, 0)",
         "1dp": "0px 1px 2px 0px rgba(0, 0, 0, 0.19)",
@@ -15,6 +26,7 @@ module.exports = {
         "8dp": "0px 8px 16px 0px rgba(0, 0, 0, 0.19)",
         "16dp": "0px 16px 32px 0px rgba(0, 0, 0, 0.19)",
         "24dp": "0px 24px 32px 0px rgba(0, 0, 0, 0.19)",
+        toast: "3px 3px 9px 0px rgba(206, 206, 206, 0.47)",
       },
       colors: {
         transparent: "transparent",
@@ -48,7 +60,7 @@ module.exports = {
         },
         Meaningful: {
           red: "#FF0000",
-          green: "#33E95B",
+          green: "#07A320",
         },
       },
 
@@ -67,6 +79,35 @@ module.exports = {
         base: "16px",
         sm: "14px",
         xs: "12px",
+      },
+
+      padding: {},
+
+      margin: {
+        "15px": "15px",
+      },
+
+      borderWidth: {
+        1: "1px",
+      },
+
+      width: {
+        235: "235px",
+        245: "245px",
+        700: "700px",
+        770: "770px",
+        775: "775px",
+      },
+
+      height: {
+        75: "75px",
+        87: "87px",
+        95: "95px",
+        145: "145px",
+        170: "170px",
+        220: "220px",
+        235: "235px",
+        240: "240px",
       },
     },
     plugins: [],
