@@ -18,6 +18,7 @@ import Note from "../assets/icons/imgIcon/Note.svg?url";
 import Security from "../assets/icons/imgIcon/Security.svg?url";
 import Sound from "../assets/icons/imgIcon/Sound.svg?url";
 import Web from "../assets/icons/imgIcon/Web.svg?url";
+import Live from "../assets/icons/imgIcon/Live.svg";
 
 // strokeIcon
 import Arrow from "../assets/icons/stroke/Arrow.svg?url";
@@ -40,6 +41,7 @@ export type IconnameProps =
   | "Game"
   | "Hit"
   | "Link"
+  | "Live"
   | "Note"
   | "Security"
   | "Sound"
@@ -80,6 +82,7 @@ export default function Icon({
     Game: Game,
     Hit: Hit,
     Link: Link,
+    Live: Live,
     Note: Note,
     Security: Security,
     Sound: Sound,
