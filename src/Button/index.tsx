@@ -20,8 +20,7 @@ export const variantsStyles: Record<ButtonVariant, string> = {
   ghost: "text-Primary-60 hover:bg-Primary-5",
 };
 
-export const buttonStyle =
-  "bg-transparent rounded-[10px] w-[35rem] py-4 justify-center";
+export const buttonStyle = "rounded-[10px] w-[35rem] py-4 justify-center";
 export const disabledStyles = "text-Grayscale-20 bg-Grayscale-5";
 export const asChildStyle = `w-[115px] h-[35px] rounded-[7px] text-Grayscale-20`;
 
@@ -65,7 +64,7 @@ export default function Button({
   return (
     <button
       type="button"
-      className={twMerge(`${getButtonStyles(variant, disabled, asChild)}`, className)}
+      className={twMerge(`bg-white ${getButtonStyles(variant, disabled, asChild)}`, className)}
       disabled={disabled}
       // eslint-disable-next-line react/jsx-props-no-spreading
       {...props}
