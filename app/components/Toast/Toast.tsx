@@ -46,7 +46,7 @@ export default function Toast({
   }
   return (
     <div
-      className={`relative w-[360px] shadow-toast rounded-[10px] border px-5 py-4 ${toastStyle} ${className}`}
+      className={`relative w-[360px] break-normal shadow-toast rounded-[10px] border px-5 py-4 ${toastStyle} ${className}`}
     >
       {title && (
         <Title size={titleSize} className={titleStyle}>
