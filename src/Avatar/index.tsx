@@ -24,7 +24,8 @@ export default function Avatar({
       src={src ? src : defaultImage}
       className={twMerge(`rounded-full object-cover ${ringColor} ${ringClass}`, className)}
       width={size}
+      height={size}
       alt={props.alt ? props.alt : ""}
-   />
+    />
   );
 }
